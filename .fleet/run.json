@@ -1,0 +1,12 @@
+{
+	"configurations": [
+{
+	"type": "command",
+	"name": "dev client",
+	"program": "yarn",
+	"workingDir": "client/",
+	"args": ["dev"],
+},
+
+	]
+}
