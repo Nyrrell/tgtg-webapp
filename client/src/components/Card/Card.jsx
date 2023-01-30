@@ -14,10 +14,11 @@ export function Card({ item }) {
   }
 
   const price = localePrice(item.item.price_including_taxes);
+	const empty = !itemsAvailable ? style.empty : "";
 
   return (
-    <div className={style.card}>
-      <div className={`${style.card_top} ${!itemsAvailable && style.empty}`}>
+					<div className={`${style.card} ${empty}`}>
+      <div className={style.card_top}>
         <img
           className={style.card_cover}
           src={item.store.cover_picture.current_url}

@@ -58,16 +58,6 @@
   border-radius: 25px;
 }
 
-.empty > .items_number {
-  background: #f6f4f5;
-  color: #5d6965;
-}
-
-.empty > img {
-  opacity: 50%;
-  filter: contrast(50%);
-}
-
 .card_bottom {
   height: 45%;
   display: flex;
@@ -91,4 +81,25 @@
   align-self: flex-end;
   font-weight: 900;
   color: #016363;
+}
+
+.empty .items_number {
+		background: #f6f4f5;
+		color: #5d6965;
+}
+
+.empty .card_cover {
+		opacity: 50%;
+		filter: contrast(50%);
+}
+
+.empty .price {
+		opacity: 60%;
+}
+
+@media screen and (min-width: 900px) {
+		.card {
+				max-width: 20vw;
+				min-width: 20vw;
+		}
 }
