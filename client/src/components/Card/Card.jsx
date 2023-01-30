@@ -4,11 +4,15 @@ import { localePrice } from "../../utils/localePrice.js";
 
 export function Card({ item }) {
   console.log(item);
-  const itemsAvailable = Math.random() < 0.5; //Boolean(item.items_available > 0);
+  const itemsAvailable = Boolean(item.items_available > 0);
 
-  const pickupStart = new Date(item.pickup_interval.start);
-  const pickupEnd = new Date(item.pickup_interval.end);
-  const pickupInterval = pickupDate(pickupStart, pickupEnd);
+  let pickupInterval = "Rien à sauver aujourd'hui";
+  if (Boolean(item.items_available)) {
+    const pickupStart = new Date(item.pickup_interval?.start);
+    const pickupEnd = new Date(item.pickup_interval?.end);
+    pickupInterval = pickupDate(pickupStart, pickupEnd);
+  }
+
   const price = localePrice(item.item.price_including_taxes);
 
   return (
@@ -18,18 +22,23 @@ export function Card({ item }) {
           className={style.card_cover}
           src={item.store.cover_picture.current_url}
         />
-        <p className={style.items_number}>
+        <div className={style.items_number}>
           {itemsAvailable
             ? `${item.items_available} à sauver`
             : "Pas de paniers"}
-        </p>
+        </div>
         <div className={style.store}>
-          <img src={item.store.logo_picture.current_url} />
-          <p>{item.display_name}</p>
+          <img
+            className={style.store_logo}
+            src={item.store.logo_picture.current_url}
+          />
+          <p className={style.store_name}>{item.store.store_name}</p>
         </div>
       </div>
       <div className={style.card_bottom}>
-        <p style={{ fontSize: "0.8rem", fontWeight: 600 }}>Panier anti-gaspi</p>
+        <p className={style.item_name}>
+          {item.item.name || "Panier anti-gaspi"}
+        </p>
         <p className={style.pickup}>{pickupInterval}</p>
         <p className={style.price}>{price}</p>
       </div>

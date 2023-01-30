@@ -1,15 +1,14 @@
 import { Card } from "./components/Card/Card.jsx";
-import item from "../itemExample.json";
+import { items } from "../items.json";
 
 function App() {
   return (
     <div className="App">
       <h1>Too Good To Go Notifier</h1>
       <div className={"wrapper"}>
-        <Card item={item} />
-        <Card item={item} />
-        <Card item={item} />
-        <Card item={item} />
+        {items.map((item) => (
+          <Card item={item} />
+        ))}
       </div>
     </div>
   );
