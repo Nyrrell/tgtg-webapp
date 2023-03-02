@@ -1,4 +1,4 @@
-import { Card } from "./components/Card/Card.jsx";
+import { Card } from "./components/Card/Card";
 import { items } from "../items.json";
 
 function App() {

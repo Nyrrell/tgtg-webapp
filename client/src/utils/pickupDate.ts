@@ -1,4 +1,4 @@
-export function pickupDate(start, end) {
+export function pickupDate(start: Date, end: Date) {
   const dateDiff = Math.round(
     (start.getTime() - Date.now()) / 1000 / 60 / 60 / 24
   );
