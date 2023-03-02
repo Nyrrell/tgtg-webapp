@@ -38,10 +38,9 @@ h1 {
 }
 
 @media screen and (min-width: 900px) {
-		.wrapper {
-				max-width: 80vw;
-				margin: auto;
-				justify-content: center;
-
-		}
+  .wrapper {
+    max-width: 80vw;
+    margin: auto;
+    justify-content: center;
+  }
 }

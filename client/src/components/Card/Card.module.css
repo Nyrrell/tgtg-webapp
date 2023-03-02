@@ -84,22 +84,22 @@
 }
 
 .empty .items_number {
-		background: #f6f4f5;
-		color: #5d6965;
+  background: #f6f4f5;
+  color: #5d6965;
 }
 
 .empty .card_cover {
-		opacity: 50%;
-		filter: contrast(50%);
+  opacity: 50%;
+  filter: contrast(50%);
 }
 
 .empty .price {
-		opacity: 60%;
+  opacity: 60%;
 }
 
 @media screen and (min-width: 900px) {
-		.card {
-				max-width: 20vw;
-				min-width: 20vw;
-		}
+  .card {
+    max-width: 20vw;
+    min-width: 20vw;
+  }
 }

@@ -1,12 +1,18 @@
 {
 	"configurations": [
-{
-	"type": "command",
-	"name": "dev client",
-	"program": "yarn",
-	"workingDir": "client/",
-	"args": ["dev"],
+  {
+  	"type": "command",
+  	"name": "dev client",
+  	"program": "yarn",
+  	"workingDir": "client/",
+  	"args": ["dev"],
+  },
+  {
+  "type": "command",
+  "name": "format",
+  "program": "yarn",
+  "workingDir": "client/",
+  "args": ["format"],
 },
-
 	]
 }
